@@ -4,12 +4,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="#8FD4F4"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
     app:cardElevation="8dp"
     app:cardCornerRadius="15dp"
     app:cardUseCompatPadding="true"
     >
 
     <RelativeLayout
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp">

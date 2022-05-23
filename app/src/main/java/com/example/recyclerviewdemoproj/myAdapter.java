@@ -4,12 +4,15 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,6 +46,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myViewHol
         holder.cPhone.setText(model.getPhone1());
         Glide.with(holder.pImg.getContext()).load(model.getChildPhoto()).into(holder.pImg);
 
+
         holder.editICON.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,13 +56,13 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myViewHol
                         .create();
 
                 View myView = dialogPlus.getHolderView();
-                EditText url = myView.findViewById(R.id.profileURL);
-                EditText name = myView.findViewById(R.id.cName);
-                EditText age = myView.findViewById(R.id.cAge);
-                EditText parent = myView.findViewById(R.id.pName);
-                EditText address = myView.findViewById(R.id.pAddress);
-                EditText p1 = myView.findViewById(R.id.phone1);
-                EditText p2 = myView.findViewById(R.id.phone2);
+                final EditText url = myView.findViewById(R.id.profileURL);
+                final EditText name = myView.findViewById(R.id.cName);
+                final EditText age = myView.findViewById(R.id.cAge);
+                final EditText parent = myView.findViewById(R.id.pName);
+                final EditText address = myView.findViewById(R.id.pAddress);
+                final EditText p1 = myView.findViewById(R.id.phone1);
+                final EditText p2 = myView.findViewById(R.id.phone2);
                 Button update = myView.findViewById(R.id.update);
 
                 url.setText(model.getChildPhoto());
@@ -125,6 +129,23 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myViewHol
                 builder.show();
             }
         });
+
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(holder.pImg.getContext(), Data.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putString("cName", model.getChildName());
+                bundle.putString("cURL", model.getChildPhoto());
+                bundle.putString("pname", model.getParentName());
+                bundle.putString("phone1", model.getPhone1());
+                bundle.putString("phone2", model.getPhone2());
+
+                i.putExtras(bundle);
+                view.getContext().startActivity(i);
+            }
+        });
     }
 
     @NonNull
@@ -136,6 +157,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myViewHol
 
     class myViewHolder extends RecyclerView.ViewHolder
     {
+        RelativeLayout card;
         CircleImageView pImg;
         TextView  cName, cAge, cPhone;
         ImageView editICON, deleteICON;
@@ -147,6 +169,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myViewHol
             cPhone = itemView.findViewById(R.id.childPhone);
             editICON = itemView.findViewById(R.id.editICON);
             deleteICON = itemView.findViewById(R.id.deleteICON);
+            card = itemView.findViewById(R.id.card);
         }
     }
 }

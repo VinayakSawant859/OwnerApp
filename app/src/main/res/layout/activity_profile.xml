@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/daycareBG"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dcProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_account"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/daycareName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@+id/dcProfile"
+            android:fontFamily="@font/andika_new_basic"
+            android:includeFontPadding="false"
+            android:text="Name"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/daycareEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/daycareName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dcProfile"
+            android:fontFamily="@font/andika_new_basic"
+            android:includeFontPadding="false"
+            android:text="email"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:layout_above="@id/bottom_navigation"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcNameTB"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Daycare Name"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_baseline_house_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcAdminNameTB"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Admin/Owner Name"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_account">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcAdminName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcAdminEmailTB"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email ID"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcAdminEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcNewPassTB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="New Password"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="password_toggle"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcNewPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcConfPassTB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Confirm Password"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="password_toggle"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcConfPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcAddressTB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Address"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcPhone1TB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Phone 1"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:prefixText="+91"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcPhone1"
+                    android:layout_width="match_parent"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcPhone2TB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Phone 2"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/purple_700"
+                app:prefixText="+91"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcPhone2"
+                    android:maxLength="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dcOccupancyTB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Batch Occupancy"
+                app:boxBackgroundColor="#FEC3DE"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:endIconMode="clear_text"
+                app:helperTextTextColor="@color/purple_700"
+                app:startIconDrawable="@drawable/ic_baseline_crop_16_9_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dcOccupancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Update"
+                app:cornerRadius="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemRippleColor="#7767CD"
+        app:labelVisibilityMode="selected"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_items">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>
