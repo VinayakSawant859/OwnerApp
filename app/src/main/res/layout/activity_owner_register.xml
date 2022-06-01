@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context=".OwnerRegister">
+    tools:context=".Activities.OwnerRegister">
 
 
     <TextView
@@ -31,36 +31,59 @@
 
         <LinearLayout
             android:id="@+id/linear_layout"
+            android:paddingBottom="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/photo"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/dcLogoTB"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/daycareImage"
+                android:layout_width="124dp"
+                android:layout_height="113dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/daycare"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.041" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/choosePhoto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:hint="Daycare Logo URL"
-                app:boxBackgroundColor="#FEC3DE"
-                app:boxCornerRadiusBottomEnd="13dp"
-                app:boxCornerRadiusBottomStart="13dp"
-                app:boxCornerRadiusTopEnd="13dp"
-                app:boxCornerRadiusTopStart="13dp"
-                app:endIconMode="clear_text"
-                app:helperText="Required*"
-                app:helperTextTextColor="@color/purple_700"
-                app:startIconDrawable="@drawable/ic_baseline_image_24">
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="#C25792"
+                android:hapticFeedbackEnabled="true"
+                android:text="Choose Photo"
+                android:elevation="10dp"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_baseline_photo_camera_24"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/dcLogo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dcNameTB"
@@ -236,6 +259,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dcPhone1"
+                    android:inputType="phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLength="10" />
@@ -264,6 +288,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dcPhone2"
+                    android:inputType="phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLength="10" />
@@ -291,7 +316,7 @@
                     android:id="@+id/dcOccupancy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -312,6 +337,16 @@
 
             </com.google.android.material.button.MaterialButton>
 
+            <ProgressBar
+                android:id="@+id/bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/daycareBG"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

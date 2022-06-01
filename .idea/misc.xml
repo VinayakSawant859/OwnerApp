@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/drawable/sent_drawable.xml" value="0.209" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_chat.xml" value="0.3500810372771475" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_chat_dashboard.xml" value="0.2857142857142857" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_data.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_main.xml" value="0.18857142857142858" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_owner_login.xml" value="0.18857142857142858" />
@@ -12,12 +15,17 @@
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_subscription.xml" value="0.26614583333333336" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/activity_video_view.xml" value="0.26979166666666665" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/custom_loading.xml" value="0.8571428571428571" />
-        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/dialogcontent.xml" value="0.14285714285714285" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/dialogcontent.xml" value="0.42857142857142855" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/receive_msg.xml" value="0.22314814814814815" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/row_conversation.xml" value="0.3828571428571429" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/send_msg.xml" value="0.5142857142857143" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/singlerow.xml" value="0.12571428571428572" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/videoupload.xml" value="0.26614583333333336" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/layout/videoview.xml" value="0.26979166666666665" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/menu/nav_items.xml" value="0.26979166666666665" />
         <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/menu/searchmenu.xml" value="0.20092592592592592" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.203" />
+        <entry key="..\:/AndroidStudioProjects/RecyclerViewDemoProj/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.203" />
       </map>
     </option>
   </component>

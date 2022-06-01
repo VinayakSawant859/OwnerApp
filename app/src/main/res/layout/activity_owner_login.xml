@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/login"
-    tools:context=".OwnerLogin">
+    tools:context=".Activities.OwnerLogin">
 
     <TextView
         android:id="@+id/textView"
@@ -39,8 +39,6 @@
         app:boxCornerRadiusBottomStart="13dp"
         app:boxCornerRadiusTopEnd="13dp"
         app:boxCornerRadiusTopStart="13dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
         app:endIconMode="clear_text"
         app:helperText="Required*"
         app:helperTextTextColor="@color/purple_700"
@@ -51,7 +49,6 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/adminLogID"
-            android:maxLength="21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true" />

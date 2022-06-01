@@ -34,19 +34,6 @@
         android:background="#79CEEF"/>
 
     <EditText
-        android:id="@+id/profileURL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/secular_one"
-        android:layout_marginHorizontal="10dp"
-        android:gravity="start|top"
-        android:layout_marginBottom="10dp"
-        android:inputType="textMultiLine" />
-
-    <EditText
         android:id="@+id/cName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
